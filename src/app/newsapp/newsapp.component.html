@@ -1,0 +1,161 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- navbar start -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="row">
+                  <div class="col ">
+                    <input type="text" class="form-control " placeholder="enter country" #inp>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-info " (click)="findcountry(inp)">Search</button>
+                </div>
+                </div>
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <button type="submit" class="btn  " (click)="homenews(inpt1)" #inpt1 value="news">Home</button>                    
+                  </li>
+                  <li class="nav-item">
+                    <button type="submit" class="btn  " (click)="checksports(inpt2)" #inpt2 value="sports">Sports</button>                    
+                  </li>
+                  <li class="nav-item">
+                    <button type="submit" class="btn  " (click)="checkbusiness(inpt3)" #inpt3 value="business">Business</button>                    
+                  </li>
+                  <li class="nav-item">
+                    <button type="submit" class="btn  " (click)="checktechnology(inpt4)" #inpt4 value="technology">Technology</button>                    
+                  </li>
+                  <li class="nav-item">
+                    <button type="submit" class="btn  " (click)="checkhealth(inpt5)" #inpt5 value="health">Health</button>                    
+                  </li>
+                  <li class="nav-item">
+                    <button type="submit" class="btn  " (click)="checkentertainmnet(inpt6)" #inpt6 value="entertainment">Entertainment</button>                    
+                  </li>
+                  <li class="nav-item">
+                    <button type="submit" class="btn  " (click)="checkgeneral(inpt7)" #inpt7 value="general">General</button>                    
+                  </li>
+                  <li class="nav-item">
+                    <button type="submit" class="btn  " (click)="checkscience(inpt8)" #inpt8 value="science">Science</button>                    
+                  </li>
+                  
+
+                </ul>
+                <div class="row">
+
+                    <div class="col ">
+                        <input type="text" class="form-control " placeholder="enter category" #cat1 >
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-info " (click)="findcat(cat1)">Search</button>
+                    </div>
+    
+                </div>
+              </div>
+            </div>
+          </nav>
+        <!-- navbar end -->
+      
+        <div class="">
+            <div >
+                <!-- category search news start -->
+                <!-- <div class="row ">
+                    <div class="col-4" *ngFor='let data of this.newses;'>
+                    <div > 
+                            <div class=" mb-3  border border-4 border-dark rounded-top rounded-bottom" style="height:500px ;" > 
+                               
+                                <div class="card-header text-center    bg-dark text-white">
+                                     <h1 >{{data.name}}</h1>
+                                     <p>{{data.category}}</p> 
+                                </div>
+                                
+                    
+                                <div class="card-body bg-white p-3 ">
+                                  <h5 class="card-title">{{data.description}}</h5>
+                                
+                                </div>
+                                
+                                <div class="card-footer text-muted bg-white p-3 ">
+                                    <div class="row">
+                                        <div class="col">{{data.language}} {{data.country}}</div>
+                                        <div class="col text-end">
+                                            <a class=" text-dark" href="{{data.url}}" style="text-decoration:none;">
+                                                <button type="button" class="btn btn-dark">Click To The News</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                  </div>
+                    
+                               
+                            </div>
+                    </div>
+                        
+                    </div>
+                    
+                   
+                    
+                </div> -->
+                <!-- category search news end -->
+
+
+                
+                <div>
+                <!-- country search news start -->
+                <div class="row">
+                    <div class="col-6  " *ngFor='let art of this.cnnewses;' >
+                        <div class=" mb-3  border border-4 border-dark rounded-top rounded-bottom" style="height:950px ;">
+                            <!-- heder start -->
+                            <div class="card-header text-center    bg-dark text-white">
+                                 <h1 >{{art.source.name}}</h1>
+                                 <h4></h4>
+                                 <span>By:{{art.author}}</span>   
+                            </div>
+                            <!-- heder end -->
+                            <!-- image start -->
+                            <div class="text-center bg-white">
+                                <img src="{{art.urlToImage}}" class="card-img-top m-3" alt="..." style="height:400px ;width: 600px;">
+                            </div>
+                            <!-- image end -->
+                            <!-- body start -->
+            
+                            <div class="card-body bg-white p-3 ">
+                              <h3 class="card-title">{{art.description}}</h3>
+                              <p class="card-text">{{art.content}}</p>
+                            </div>
+                            <!-- body end -->
+                            
+                            <!-- footer start -->
+                            <div class="card-footer text-muted bg-white p-3 ">
+                                <div class="row">
+                                    <div class="col">{{art.publishedAt}}</div>
+                                    <div class="col text-end">
+                                        <a class=" text-dark" href="{{art.url}}" style="text-decoration:none;">
+                                            <button type="button" class="btn btn-dark">Click To The News</button>
+                                        </a>
+                                    </div>
+                                </div>                                
+                              </div>            
+                            <!-- footer end -->
+                        </div>
+                    </div>
+            
+            
+
+                
+
+
+                </div>
+                <!-- country search news end -->
+                </div>
+
+
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
